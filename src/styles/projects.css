@@ -1,0 +1,114 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.project {
+  padding: 1em;
+  background-color: var(--color-ternary);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6 ease-out;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.project-pic {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.project-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 0.5px 0.5px 0 var(--color-background),
+    -0.5px -0.5px 0 var(--color-background),
+    -0.5px 0.5px 0 var(--color-background),
+    0.5px -0.5px 0 var(--color-background);
+}
+
+.project-stack {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.project-tag {
+  width: fit-content;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  color: var(--color-background);
+  background-color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+.project-actions {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.project-actions-item {
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  background-color: var(--color-background);
+  box-shadow: 1px 1px 5px #656565;
+}
+
+.project-actions-logo img {
+  width: 1.2em;
+  vertical-align: middle;
+}
+
+.project-actions-link {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .project {
+    height: 100%;
+  }
+
+  .project:hover {
+    transform: translateY(-2%);
+  }
+
+  .project-actions-item:hover {
+    box-shadow: 1px 1px 5px var(--color-primary);
+    font-weight: bold;
+  }
+}
+@media (min-width: 1200px) {
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

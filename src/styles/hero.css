@@ -1,0 +1,45 @@
+.hero {
+  text-align: center;
+}
+
+.hero-content {
+  margin-bottom: 1em;
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: var(--color-secondary);
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+.hero-title {
+  margin: 1em auto;
+  font-size: 3em;
+  font-family: "Outfit", sans-serif;
+}
+
+.hero-text {
+  margin: 0;
+}
+
+.profile-picture img {
+  border-radius: 1em;
+  width: 80%;
+  max-width: 360px;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 450px;
+    margin-bottom: 0;
+  }
+}

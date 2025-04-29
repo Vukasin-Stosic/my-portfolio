@@ -1,0 +1,8 @@
+.back-to-top {
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-color: red;
+  position: sticky;
+  bottom: 10%;
+  right: 10%;
+}
