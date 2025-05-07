@@ -2,6 +2,7 @@
   --color-background: #343434;
   --color-text: #f5f5f5;
   --color-primary: #4b8ca3;
+  --color-primary-transparent: hwb(196 29% 36% / 0.5);
   --color-secondary: #8ca34b;
   --color-ternary: #414141;
 }

@@ -23,6 +23,7 @@ header {
   right: 0;
   left: 0;
   transition: ease-in-out 0.3s;
+  border-bottom: 1px solid #111;
 }
 
 .navbar-item {
@@ -88,6 +89,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 2em;
+    border: none;
   }
 
   .navbar-item {

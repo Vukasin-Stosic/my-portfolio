@@ -1,8 +1,82 @@
+@keyframes scrollUp {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  70% {
+    transform: scale(0.7) translateY(-40px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hiding {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .back-to-top {
-  width: 40px;
+  padding: 0.5em;
   aspect-ratio: 1/1;
-  background-color: red;
-  position: sticky;
-  bottom: 10%;
-  right: 10%;
+  background-color: var(--color-primary-transparent);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 1em;
+  border: 1px solid var(--color-background);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.arrow {
+  --s: 0.5em; /* control the shape (can be percentage) */
+
+  width: 2em;
+  aspect-ratio: 5/3;
+  clip-path: polygon(
+    0 100%,
+    0 calc(100% - var(--s)),
+    50% 0,
+    100% calc(100% - var(--s)),
+    100% 100%,
+    50% var(--s)
+  );
+  background: var(--color-text);
+  border: 1px solid var(--color-background);
+}
+
+.show-back-to-top {
+  animation: showing 0.5s ease-in-out;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.show-back-to-top.animate {
+  animation: showing 0.5s ease-in-out, scrollUp 0.5s ease-in-out;
+}
+
+.hide-back-to-top {
+  animation: hiding 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-back-to-top:hover {
+  background-color: var(--color-primary);
 }
